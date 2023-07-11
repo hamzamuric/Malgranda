@@ -1,0 +1,8 @@
+var server = ServerSocket(8877);
+while (true) {
+    var socket = server.accept();
+    var input = socket.receive();
+    var reversed = reverse(input);
+    socket.send(reversed);
+    socket.close();
+}

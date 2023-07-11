@@ -1,0 +1,5 @@
+var socket = Socket("localhost", 8877);
+var data = input();
+socket.send(data);
+var result = socket.receive();
+print result;
